@@ -1,0 +1,14 @@
+import React, { useState, useEffect} from "react";
+import ReactDOM from 'react-dom';
+
+function Notice() {
+
+	
+  return (
+	  <div>
+	  	Notice
+	  </div>
+  );
+}
+
+export default Notice;
