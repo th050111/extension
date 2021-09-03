@@ -6,8 +6,9 @@
 
 #calender-container{
 	position:absolute;
-	top:20%;
-	left:30%;
+	z-index: 100;
+	top:160%;
+	left:-50%;
 	height: 150px;
 	width: 200px;
 	background-color:white;
@@ -23,4 +24,10 @@
 	border-right: 1px solid black;
 	border-bottom: 1px solid black;
 	box-sizing: border-box;
+}
+.today-box{
+	background-color:skyblue;
+}
+.current-box{
+	background-color: #F3B0B0;
 }

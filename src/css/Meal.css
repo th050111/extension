@@ -1,15 +1,15 @@
 #meal-container{
 	width: 200px;
-	height: 200px;
 	
-	background-color: white;
 	position: absolute;
-	top:50%;
+	top:30%;
 	left:50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%);
 	overflow:hidden;
 }
 .meal-element{
+	padding:5px;
+	background-color: white;
 	width:100%;
 	height: 30px;
 }
@@ -26,6 +26,16 @@
 	overflow:hidden;
 	display:flex;
 }
+#day-selector{
+	position: absolute;
+	z-index:100;
+	top:10%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	background-color: rgb(243,232,232);
+	border: 1px solid white;
+}
+
 .type{
 	width:50px;
 	height:100%;
@@ -33,6 +43,5 @@
 	text-align: center;
 }
 .selected, .type:hover{
-
 	background-color: skyblue;
 }

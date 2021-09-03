@@ -1,9 +1,10 @@
 body{
-	position: fixed;
+	position:relative;
 	z-index:-9999;
 	width: 400px;
 	height: 500px;
 	overFlow: hidden;
+	margin: 0px;
 }
 
 #main-container{

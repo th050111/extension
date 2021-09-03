@@ -2,7 +2,7 @@ import React, { useState, useEffect} from "react";
 import ReactDOM from 'react-dom';
 import "../css/Calender.css"
 
-function Calender({size, onClickDay, date}) {
+function Calender({size, onClickDay, date, today}) {
 	const [dayList,setDayList] = useState(Array(5).fill(Array(7)))
 	
 	
@@ -37,7 +37,7 @@ function Calender({size, onClickDay, date}) {
   			return <div className="day-row">
 				{
 					list.map((day)=>{
-						return <div className="day-box">{day!=-1&&day}</div>
+						return <div className={"day-box "+(today.date===day?"today-box":(date.date === day?"current-box":""))} onClick={()=>{day!=-1 && onClickDay(day)}}>{day!=-1&&day}</div>
 					})
   				}
   				</div>
