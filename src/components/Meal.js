@@ -111,7 +111,11 @@ function Meal() {
 									)
 								}))
 					}
-				</div></>}
+				</div>
+				<div class="chat-img-container">
+					<image src="chat.png" class="chat-img"></image>
+				</div>
+				</>}
 		</div>
 	);
 }
