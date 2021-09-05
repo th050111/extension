@@ -68,8 +68,9 @@ function Meal() {
 					}
 				</div>
 				<div id="day-selector">
-					<div onClick={() => setCalenderOpen((prev) => !prev)}>{`${date.month}월 ${date.date}일`}</div>
-
+					<div class="day-array">◀</div>
+					<div onClick={() => setCalenderOpen((prev) => !prev)} className="day">{`${date.month}월 ${date.date}일`}</div>
+					<div class="day-array">▶</div>
 					{calenderOpen && <Calender date={{ year: 2021, month: date.month, date: date.date }} onClickDay={(day) => { setCalenderOpen(false); setDate({ ...date, date: day }) }} today={today} />}
 				</div>
 				<div id="meal-container">
@@ -78,7 +79,7 @@ function Meal() {
 							(
 								mealList[type].map((el) => {
 									return (
-										<div style={{display:"flex"}}>
+										<div style={{display:"flex"}} className="meal-element-container">
 											<div className="meal-element" >{el.replace(/[0-9]/g, "").replace(/\./gi, "")}</div>
 											<div className="star-list">
 												{
