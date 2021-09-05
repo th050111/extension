@@ -113,7 +113,7 @@ function Meal() {
 					}
 				</div>
 				<div class="chat-img-container">
-					<image src="chat.png" class="chat-img"></image>
+					<image src="/assets/image/chat.png" class="chat-img"></image>
 				</div>
 				</>}
 		</div>
