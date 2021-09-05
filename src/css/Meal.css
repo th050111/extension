@@ -1,5 +1,5 @@
 #meal-container{
-	width: 200px;
+	width: 300px;
 	
 	position: absolute;
 	top:30%;
@@ -10,7 +10,7 @@
 .meal-element{
 	padding:5px;
 	background-color: white;
-	width:100%;
+	width:60%;
 	height: 30px;
 }
 
@@ -44,4 +44,24 @@
 }
 .selected, .type:hover{
 	background-color: skyblue;
+}
+
+.star-fill{
+	position: absolute;
+	font-size: 20px;
+	color: gold;
+	width:10px;
+	overflow: hidden;
+}
+.star{
+	color: white;
+}
+.star, .star-fill{
+	font-size: 20px;
+	-webkit-text-stroke-width: 1.2px;
+	/* -webkit-text-stroke-color: #2b2a29; */
+}
+.star-list{
+	width: 20%;
+	height: 30px;
 }
