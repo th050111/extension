@@ -56,6 +56,11 @@ function Meal() {
 		console.log(dbMealList[`${date.month}${date.date}`])
 	}, [date])
 
+	const onDayArray = (num) => {
+		if(date.date<=1 || date.date >= 31)
+			return;
+		date += num;
+	}
 	return (
 		<div>
 			{!isLoading && <>
@@ -68,9 +73,9 @@ function Meal() {
 					}
 				</div>
 				<div id="day-selector">
-					<div class="day-array">◀</div>
+					<div class="day-array" onClick={()=>{onDayArray(-1)}}>◀</div>
 					<div onClick={() => setCalenderOpen((prev) => !prev)} className="day">{`${date.month}월 ${date.date}일`}</div>
-					<div class="day-array">▶</div>
+					<div class="day-array" onClick={()=>{onDayArray(1)}}>▶</div>
 					{calenderOpen && <Calender date={{ year: 2021, month: date.month, date: date.date }} onClickDay={(day) => { setCalenderOpen(false); setDate({ ...date, date: day }) }} today={today} />}
 				</div>
 				<div id="meal-container">
